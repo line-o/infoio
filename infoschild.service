@@ -3,8 +3,8 @@ Description=Infoschild
 After=multi-user.target
 
 [Service]
-Type=idle
-ExecStart=/usr/bin/python /home/pi/infoschild/run.py > /home/pi/infoschild/infoschild.log 2>&1
+Type=exec
+ExecStart=/usr/bin/python3 /home/pi/infoschild/run.py > /home/pi/infoschild/infoschild.log 2>&1
 
 [Install]
 WantedBy=multi-user.target
