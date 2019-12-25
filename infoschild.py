@@ -30,14 +30,14 @@ class Infoschild(object):
     LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
     LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
     LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
-    framelength = 0.10       # seconds between each frame (wobbles between 12.9 and 20.1)
+    framelength = 0.10       # seconds between each frame (wobbles around the lenght set here)
     tick = 0                 # each frame adds one tick - (may be useful for syncing multiple clients)
-    LED_INFOTEXT_START = 0
-    LED_RAUMSTATION_START = 139
-    GREEN = [0, 187, 49]
-    ORANGE = [254, 80, 0]
-    WHITE = [240, 240, 240]
-    MAX_VOTES = 10
+    LED_INFOTEXT_START = 0      # first LED index of text section
+    LED_RAUMSTATION_START = 139 # first LED index of spacestation section
+    GREEN = [0, 187, 49]        # full hope color
+    ORANGE = [254, 80, 0]       # full desctruction color
+    WHITE = [240, 240, 240]     # neutral color (also spacestation default)
+    MAX_VOTES = 10              # how many votes to take into account
 
     def __init__ (self):
         self.delta = 0
