@@ -68,7 +68,7 @@ class Infoschild(object):
         if self.hope > 0:
             return self.mixColor(Infoschild.WHITE, Infoschild.GREEN, self.hope)
         if self.hope < 0:
-            return self.mixColor(Infoschild.ORANGE, Infoschild.WHITE, self.hope * -1)
+            return self.mixColor(Infoschild.WHITE, Infoschild.ORANGE, self.hope * -1)
 
     def blink(self):
         color = Infoschild.WHITE
